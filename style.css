@@ -1,0 +1,311 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+
+        body {
+            background-color: #683838;
+            color: #3D2C2E;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        
+
+/* ===== HEADER ===== */
+header {
+    background-color: #21171D;
+    color: #854863;
+    padding: 14px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #684052;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 100;
+}
+.logo {
+    color: #E69AB8;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* ===== NAVIGATION ===== */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+header nav a {
+    color: #C3AAB5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+header nav a:hover {
+    color: #E69AB8;
+}
+
+/* ACTIVE LINK */
+header nav a.active {
+    color: #E69AB8;
+    font-weight: 700;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    header nav {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+}
+
+
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FAD2E1;
+        }
+
+        /* Main Container layout with Aside */
+        .main-container {
+            display: flex;
+            flex: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Aside */
+        aside {
+            width: 260px;
+            background-color: #b6768c;
+            padding: 2rem 1.5rem;
+            border-right: 2px solid #D4B2B6;
+            margin-bottom: 0;
+        }
+
+        aside h3 {
+            color: #96535b;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #705356;
+            padding-bottom: 0.5rem;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            margin-bottom: 0.8rem;
+        }
+
+        aside a {
+            color: #3D2C2E;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        aside a:hover {
+            background-color: #E89BB0;
+            color: #FFFFFF;
+        }
+
+        /* Content Area */
+        main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .genre-section {
+            margin-bottom: 3rem;
+        }
+
+        .genre-section h2 {
+            font-size: 1.8rem;
+            color: #96535b;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #E89BB0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Music Grid */
+        .playlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Music Card */
+        .music-card {
+            background-color: #FFFFFF;
+            border: 2px solid #D4B2B6;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(61, 44, 46, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .music-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(61, 44, 46, 0.1);
+        }
+
+        /* Image on Top */
+        .card-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #D4B2B6;
+        }
+
+        .card-info {
+            padding: 1rem;
+            flex: 1;
+        }
+
+        .card-info h4 {
+            font-size: 1.1rem;
+            color: #3D2C2E;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-info p {
+            font-size: 0.9rem;
+            color: #705356;
+            margin-bottom: 1rem;
+        }
+
+        /* Controls on Bottom */
+        .card-controls {
+            padding: 0 1rem 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        audio {
+            width: 100%;
+            height: 32px;
+        }
+
+        .url-input {
+            width: 100%;
+            padding: 0.4rem;
+            border: 1px solid #D4B2B6;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #3D2C2E;
+            background-color: #FDFBFB;
+        }
+
+        /* Footer */
+        
+.site-footer {
+  background: #21171D;
+  color: #F6EDF1;
+  text-align: center;
+  padding: 35px 20px 22px;
+  border-top: 1px solid #684052;
+  margin-top: 0;
+}
+
+.footer-brand {
+  color: #D982A5;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.site-footer p {
+  color: #C3AAB5;
+  margin: 10px 0 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  color: #F6EDF1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #D982A5;
+}
+
+.footer-bottom {
+  color: #D982A5;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.site-footer small {
+  color: #9E8993;
+  font-size: 12px;
+}
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+                border-right: none;
+                border-bottom: 2px solid #D4B2B6;
+            }
+        }
+        
+        html{
+            scroll-behavior: smooth;
+        }
